@@ -73,40 +73,8 @@
         </nav>
 
         <main class="py-4">
-            @auth
-            <div class="container">
-                @if(session()->has('success'))
-                    <div class="alert alert-success">
-                    {{ session()->get('success') }}
-                    </div>
-                @endif
-                @if(session()->has('error'))
-                    <div class="alert alert-danger">
-                    {{ session()->get('error') }}
-                    </div>
-                @endif
-                <div class="row">
-                    <div class="col-md-4">
-                        <ul class="list-group">
-                            <li class="list-group-item">
-                                <a href="#">Posts</a>
-                            </li>
-                            <li class="list-group-item">
-                                <a href="#">Categories</a>
-                            </li>
-                        </ul>
-
-                    </div>
-                     <div class="col-md-8">
-                        @yield('content')
-                    </div>
-                </div>
-            </div>
-            @else
             @yield('content')
-            @endauth
         </main>
-
     </div>
 </body>
 </html>
