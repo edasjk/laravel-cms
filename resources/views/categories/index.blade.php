@@ -15,12 +15,16 @@
         <thead>
             <th>Name</th>
             <th></th>
+            <th>Posts Count</th>
             <tbody>
                 @foreach($categories as $category)
                 <tr>
                     <td>
                         {{ $category->name }}
                     </td>
+                    <td>
+                        {{ $category->posts->count() }}
+                    </td>                    
                     <td>
                         <a href="{{ route('categories.edit', $category->id) }}" class="btn btn-info btn-sm">
                             Edit
