@@ -41,7 +41,7 @@
                             </form>
                         </td>
                     @else
-                    <td>
+                        <td>
                             <a href="{{ route('posts.edit', $post->id) }}" class="btn btn-info btn-sm">Edit</a>                            
                         </td>
                     @endif
